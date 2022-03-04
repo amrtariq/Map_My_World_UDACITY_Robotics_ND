@@ -11,6 +11,49 @@ For this project we will be using the rtabmap_ros package, which is a ROS wrappe
 ## DB Link: 
 https://drive.google.com/file/d/1PV9AbRfmO7eishBhtfHljB84FGv_XHVN/view?usp=sharing
 
+## Structure
+```
+    .Map_My_World             # Map My World
+├── my_robot                               # my_robot package        
+│   │   ├── config                         # config folder for configuration files   
+│   │   │   ├── base_local_planner_params.yaml
+│   │   │   ├── costmap_common_params.yaml
+│   │   │   ├── global_costmap_params.yaml
+│   │   │   ├── local_costmap_params.yaml
+│   │   ├── launch                         # launch folder for launch files   
+│   │   │   ├── amcl.launch
+│   │   │   ├── robot_description.launch
+│	│	│	├── mapping.launch
+│   │   │   ├── world.launch
+│   │   │   ├── teleop.launch   
+│   │   ├── maps                           	   # maps folder for maps
+│   │   │   ├── map.pgm
+│   │   │   ├── map.yaml
+│   │   ├── meshes                         # meshes folder for sensors
+│   │   │   ├── hokuyo.dae
+│   │   ├── models                           # models folder for models files
+│   │   │   ├── white_ball
+│   │   │   │   ├── model.config
+│   │   │   │   ├── model.sdf
+│   │   │   ├── project2_building
+│   │   │   │   ├── model.config
+│   │   │   │   ├── model.sdf	      
+│   │   ├── urdf                           # urdf folder for xarco files
+│   │   │   ├── my_robot.gazebo
+│   │   │   ├── my_robot.xacro
+│   │   ├── worlds                         # world folder for world files
+│   │   │   ├── empty.world
+│   │   │   ├── myworld.world
+│   │   ├── CMakeLists.txt                 # compiler instructions
+│   │   ├── package.xml                    # package info
+│   ├── teleop_twist_keyboard              # teleop_twist_keyboard
+│   │   ├── CHANGELOG.rst                  # change log
+│   │   ├── CMakeLists.txt                 # compiler instructions
+│   │   ├── README.md                      # README for documentation
+│   │   ├── package.xml                    # package info
+│   │   ├── teleop_twist_keyboard.py       # keyboard controller
+```
+
 ## Prerequisites
 - ROS (Kinetic), Gazebo on Linux
 - CMake & g++/gcc
